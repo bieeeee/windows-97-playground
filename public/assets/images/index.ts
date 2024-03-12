@@ -1,11 +1,11 @@
-import logo from "./images/logo-icon.png";
-import prompt from './images/prompt.png';
-import close from './images/close.png';
-import folder from './images/folder.png';
-import openFolder from './images/folder-open.png';
-import linkedin from './images/linkedin.png';
-import github from './images/github.png';
-import calculator from './images/calculator.png';
-import velog from './images/velog.png';
+import logo from "./logo-icon.png";
+import prompt from './prompt.png';
+import close from './close.png';
+import folder from './folder.png';
+import openFolder from './folder-open.png';
+import linkedin from './linkedin.png';
+import github from './github.png';
+import calculator from './calculator.png';
+import velog from './velog.png';
 
 export { logo, prompt, close, folder, openFolder, linkedin, github, calculator, velog }
