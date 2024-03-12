@@ -8,8 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        PSN: ['PSN', 'sans-serif'],
+      },
       colors: {
         gray: {
+          100: 'var(--gray-100)',
           200: 'var(--gray-200)',
           300: 'var(--gray-300)'
         },
