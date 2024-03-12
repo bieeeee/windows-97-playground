@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'PSN';
+  font-style: normal;
+  src: url('../public/assets/fonts/px\ sans\ nouveaux.woff2') format('woff2'),
+       url('../public/assets/fonts/px\ sans\ nouveaux.woff') format('woff');
+}
+
 html,
 body {
   margin: 0;
-  /* background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%); */
+  background-color: var(--gray-100);
+  font-size: .875rem;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -19,6 +27,7 @@ body {
 
 @layer base {
   :root {
+    --gray-100: #f3f3f3;
     --gray-200: #d4d4d4;
     --gray-300: #5b5b5b;
     --dark-navy: #000184;
@@ -38,7 +47,7 @@ body {
   }
 
   input {
-    @apply p-[.3125rem]
+    @apply p-1.5
   }
 }
 
@@ -52,7 +61,7 @@ body {
   }
 
   .folderContainer {
-    @apply .border w-full max-w-[80vw] h-[80vh] mx-auto p-[.3125rem] flex flex-col
+    @apply .border w-full max-w-[80vw] h-[80vh] mx-auto p-1.5 flex flex-col
   }
 }
 
