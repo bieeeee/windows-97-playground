@@ -19,7 +19,7 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@images": ["./public/assets/images"],
+      "@images": ["./public/assets/images/index.ts"],
       "@components/*": ["./components/*"]
     }
   },
