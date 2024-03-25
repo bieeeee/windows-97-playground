@@ -3,9 +3,8 @@ import Image, { StaticImageData } from 'next/image';
 
 interface IconProps {
     title: string;
-    alt: string;
     href: string;
-    src: string | StaticImageData;
+    iconImg: any;
     target?: string;
     rel?: string;
     open?: any;
@@ -13,17 +12,18 @@ interface IconProps {
 
 export const Icon: React.FC<IconProps> = ({
     title,
-    alt,
     href,
-    src,
+    iconImg,
     target,
     rel,
     open
 }) => {
     return (
-        <Link href={href} onClick={open} className="icon" target={target} rel={rel}>
-            <Image src={src} width={48} height={48} alt={alt} priority />
-            <p>{title}</p>
+        <Link href={href} onClick={open} className="icon flex flex-col justify-center" target={target} rel={rel}>
+            <div className='w-10 h-10'>
+                {iconImg}
+            </div>
+            <p className="">{title}</p>
         </Link>
     )
 }
