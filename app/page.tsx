@@ -1,30 +1,62 @@
 import { Icon } from "@/components/_ui/icon";
-import { folder, prompt } from "@/public/assets/images";
-import Image from "next/image";
+import { Calculator, Folder, Github, Globe, Linkedin, Prompt, Velog } from "@/public/assets/images";
 
 export default function Home() {
   const icons = [
     {
       id: 1,
       title: 'About',
-      image: <Image src={prompt} alt="About" />
+      image: Prompt,
+      href: '/'
     },
     {
       id: 2,
       title: 'Skills',
-      image: <Image src={folder} alt="Skills" />
+      image: Folder,
+      href: '/'
     },
     {
       id: 3,
       title: 'Projects',
-      image: <Image src={folder} alt="Projects" />
+      image: Folder,
+      href: '/'
+    },
+    {
+      id: 4,
+      title: 'Github',
+      image: Github,
+      href: '/'
+    },
+    {
+      id: 5,
+      title: 'LinkedIn',
+      image: Linkedin,
+      href: '/'
+    },
+    {
+      id: 6,
+      title: 'Blog',
+      image: Velog,
+      href: '/'
+    },
+    {
+      id: 7,
+      title: 'Calculator',
+      image: Calculator,
+      href: '/'
+    },
+    {
+      id: 8,
+      title: 'Map',
+      image: Globe,
+      href: '/map'
     }
   ]
   return (
-    <main className="p-5">
+    <main className="m-5">
       <div className="flex flex-col gap-5">
         {icons.map((icon, i) => (
-          <Icon key={i} title={icon.title} href={''} iconImg={icon.image} />
+          <Icon key={i} title={icon.title} href={icon.href} image={icon.image} />
         ))}
       </div>
     </main>

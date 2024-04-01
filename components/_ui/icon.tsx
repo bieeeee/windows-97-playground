@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 interface IconProps {
     title: string;
     href: string;
-    iconImg: any;
+    image: any;
     target?: string;
     rel?: string;
     open?: any;
@@ -13,17 +13,17 @@ interface IconProps {
 export const Icon: React.FC<IconProps> = ({
     title,
     href,
-    iconImg,
+    image,
     target,
     rel,
     open
 }) => {
     return (
-        <Link href={href} onClick={open} className="icon flex flex-col justify-center" target={target} rel={rel}>
-            <div className='w-10 h-10'>
-                {iconImg}
+        <Link href={href} onClick={open} className="w-12 flex flex-col justify-center items-center" target={target} rel={rel}>
+            <div className='w-10 h-10 leading-normal'>
+                <Image src={image} alt={title} />
             </div>
-            <p className="">{title}</p>
+            <span>{title}</span>
         </Link>
     )
 }
